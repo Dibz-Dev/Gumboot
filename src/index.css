@@ -1,18 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
 
 html {
   
-  /* background-color: lightblue; */
-  height: 100vh;
-  overflow: hidden;
+  height: auto;
   box-sizing: border-box;
 }
 
 ul {
   list-style: none;
+}
+
+.line-break {
+  width:60%;
+  height: 1px;
+  margin: auto;
+  background-color: black;
 }
 /* --------------------------------LOADING PAGE--------------------------------------- */
 
@@ -83,9 +88,25 @@ ul {
   cursor: pointer;
 }
 
+.sideNav-menu li:hover {
+  
+  transform: scale(1.1);
+}
+
+.hash {
+  display: none;
+}
+
+.hash.active {
+
+  display: inline;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 /* --------------------------------------------------------------------------------------- */
 
-/* ------------------------CONTENT CONTAINER---------------------------------------------- */
+/* ------------------------IMAGES CONTAINER---------------------------------------------- */
 
 .container {
 
@@ -177,3 +198,278 @@ ul {
   grid-row-end: 6;
 
 }
+
+/* ------------------------------------------------------------------------------------------- */
+/* -------------------------------ABOUTUS----------------------------------------------------- */
+
+.content-container {
+
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  left: 25%;
+  width: 74%;
+  bottom:0%;
+  padding: 5px;
+  background-color: beige;
+  
+  
+
+}
+
+.about {
+
+  height: 150%;
+}
+
+.food {
+
+  height: 150%;
+}
+
+.drinks {
+
+  height: 100%;
+}
+
+.content-header {
+
+  text-align: center;
+  margin-top: 100px;
+  font-family: 'Love Ya Like A Sister', cursive;
+}
+
+.content-paragraph-box {
+
+  padding-top: 20px;
+  width: 60%;
+  margin: auto;
+}
+
+.content-paragraph-box p {
+
+ font-size: 1.2rem;
+ font-family: 'karla', sans-serif;
+ line-height: 2;
+}
+
+/* ----------------------------------------------------------------------------------------- */
+
+/* ---------------------------------MENU FOOD----------------------------------------------- */
+
+.menu-box {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px 30px;
+  margin: auto;
+  width:80%;
+
+}
+.menu-header {
+  font-family: 'love ya like a sister', cursive;
+  margin: auto;
+}
+
+.brunch-heading {
+
+  font-family: 'karla', cursive;
+  text-decoration: underline;
+  
+}
+
+.food-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+.food-item {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: -20px;
+  
+}
+
+.food-item.extras {
+
+  margin-top: -5px;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 90%;
+  padding: 5px;
+}
+
+.food-item.pastries {
+
+  margin-top: -5px;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 90%;
+  padding: 5px;
+}
+
+.item-sub {
+
+  font-family: 'love ya like a sister', sans-serif;
+
+}
+
+.item-description {
+
+  margin-top: -20px;
+  grid-row-start: 2;
+  font-family: 'karla', sans-serif;
+
+}
+
+.item-price {
+  margin-left: 30px;
+  font-weight: bold;
+}
+
+
+/* ----------------------------------------------------------------------------------- */
+
+/* ------------------------------DRINKS MENU------------------------------------------ */
+
+
+.drink-box {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: auto;
+    width:90%;
+  
+  
+}
+.drink-heading {
+
+  font-family: 'karla', cursive;
+  margin: auto;
+ 
+}
+
+.drink-heading.harder-stuff {
+
+  padding-top: 15px;
+}
+
+.drink-square {
+  display: flex;
+  flex-direction: column;
+  justify-self: stretch;
+  align-self: stretch;
+  text-align: start;
+}
+
+.para-description {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin-left: 20px;
+  
+}
+
+.para-description.edge {
+
+  margin-bottom: 20px;
+  
+}
+
+.para-description.cocktails {
+
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  
+
+}
+.para-description p {
+
+  font-family: 'karla', sans-serif;
+}
+
+.sub-drink {
+
+  font-weight: bold;
+  font-family: 'Lobster Two', cursive;
+}
+
+.price {
+
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.happy-hour-style {
+
+  margin-top: 40px;
+  font-size: 4rem;
+  font-family:'Lobster Two', sans-serif ;
+  text-align: center;
+}
+
+.sub-happy-hour {
+
+  margin-top: -50px;
+  text-align: center;
+}
+
+.horiz-line {
+
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  height: 170px;
+  width: 1px;
+  background-color: black;
+}
+
+.horiz-line.bottom {
+
+  position: absolute;
+  left: 50%;
+  top: 61%;
+  height: 170px;
+  width: 1px;
+  background-color: black;
+}
+
+.line-break-width-left {
+
+  position: absolute;
+  top: 58%;
+  left: 10%;
+  width: 330px;
+  height: 1px;
+  margin: auto;
+  background-color: black;
+}
+
+.line-break-width-right {
+
+  position: absolute;
+  top: 58%;
+  right: 10%;
+  width: 330px;
+  height: 1px;
+  margin: auto;
+  background-color: black;
+}
+
+
+
