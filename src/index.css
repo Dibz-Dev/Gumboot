@@ -471,5 +471,33 @@ ul {
   background-color: black;
 }
 
+/* ------------------------------------------------------------------------------------ */
+/* -------------------------------------CONTACT---------------------------------------- */
 
 
+
+.contact-info-wrapper {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+
+.location , .contact, .hours {
+
+  border-right: 2px solid black;
+  margin-top: 50%;
+  padding: 30px;
+  text-align: center;
+}
+
+.contact-header {
+
+  font-family: 'love ya like a sister', cursive;
+}
+
+.contact-info {
+
+  font-family: 'karla', cursive;
+}

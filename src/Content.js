@@ -3,6 +3,8 @@ import About from './About';
 import Menu from './Menu';
 import Reservations from './Reservations';
 import Drinks from './Drinks';
+import Contact from './Contact';
+
 
 const Content = () => {
     return (  
@@ -13,6 +15,7 @@ const Content = () => {
           {/* <Menu /> */}
           {/* <Reservations /> */}
           {/* <Drinks /> */}
+          <Contact />
        </div>
 
     );
