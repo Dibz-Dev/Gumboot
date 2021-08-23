@@ -1,7 +1,7 @@
 const Reservations = () => {
     return ( 
 
-        <div id="Reservations" className="content-container">
+        <div id="Reservations" className="content-container reservations">
 
             <h2 className="content-header">Reservations</h2>
            <div className="content-paragraph-box">

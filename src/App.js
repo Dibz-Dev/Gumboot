@@ -1,11 +1,15 @@
 import './index.css';
 // import Loading from './loading';
-import Home from './Home'
+import Content from './Components/Content'
 
 function App() {
+
+ 
+
   return (
     <div className="App">
-      <Home />
+         
+          <Content />
    {/* <Loading /> */}
     </div>
   );
