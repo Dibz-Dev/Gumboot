@@ -1,13 +1,24 @@
+import AboutData from '../Data/about-data';
+
 const About = () => {
+
+    const title = 'About Us';
+
     return ( 
+
+        
             
         <div id="About" className="content-container about">
-                <h2 className="content-header">About Us</h2>
-
+                
                 <div className="content-paragraph-box">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dolorum sint aut perspiciatis voluptatum accusantium iure quam natus. Iusto alias quis autem doloribus laborum odit minus delectus odio natus? Tenetur.<br /><br /><div className="line-break"></div><br />
-                    Iusto alias quis autem doloribus laborum odit minus delectus odio natus? Tenetur.
-                    <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dolorum sint aut perspiciatis voluptatum accusantium iure quam natus. Iusto alias quis autem doloribus laborum odit minus delectus odio natus? Tenetur.</p>
+                <h2 className="content-header">{title}</h2>
+
+                    <p className="para-about-us"> {AboutData.paraOne} </p>
+                    <div className="img-decor-wrapper">
+                    <p style={{ width: "90%"}}> {AboutData.paraTwo} </p>
+                    <img className="about-img-decor" src="cafedecor.jpg" alt="inside cafe" />
+                    </div><br/><br/><br/>
+                    <p className="lower-about-para" style={{  width: "95%"}}> {AboutData.paraThree} </p>
                 </div>
 
         </div>

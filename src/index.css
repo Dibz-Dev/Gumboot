@@ -2,24 +2,108 @@
 @import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
 
 
 html {
-  
-  height: auto;
+  background-color: rgb(194, 166, 212);
   box-sizing: border-box;
+  overflow-x: hidden;
 }
+
 
 ul {
   list-style: none;
 }
 
 .line-break {
-  width:60%;
+  width:40%;
   height: 1px;
   margin: auto;
   background-color: black;
 }
+
+.gumboot-logo {
+
+  position: absolute;
+  top: 0%;
+  left: -20%;
+  width: 400px;
+}
+
+.gumboot-logo-menu {
+
+  position: absolute;
+  left: 50%;
+  transform: translate(-55%);
+  top: 2%;
+  height: 60px;
+  width: 300px;
+  
+}
+
+.page-wrapper {
+
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+ 
+  
+}
+
+.content-page-style {
+
+ 
+  margin-top: -10px;
+  margin-left: -5px;
+ 
+  
+}
+
+@media (max-width: 1200px) {
+
+  .gumboot-logo {
+
+    position: fixed;
+    top: 0%;
+    left: -10%;
+    width: 400px;
+  }
+
+}
+
+@media (max-width: 1000px) {
+
+  .gumboot-logo {
+
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 250px;
+  }
+  .page-wrapper {
+
+    display: flex;
+    justify-content: center;
+  
+  }
+  
+  .content-page-style {
+ 
+    margin-top: -10px;
+    margin-left: -5px;
+    margin-bottom: -700px;
+ 
+  }
+
+  .gumboot-logo-menu {
+
+    position: absolute;
+    display: none;
+    
+  }
+  
+}
+
 /* --------------------------------LOADING PAGE--------------------------------------- */
 
 .loadingPage-wrapper {
@@ -66,23 +150,23 @@ ul {
 .sideNav { 
    
    position: fixed;
-   left:0%;
-   top:0%;
-   bottom:0%;
-   background-color: rgba(21, 131, 131, 0.733);
+   top: 0%;
+   left: 0%;
+   bottom: 0%;
+   background-color: rgb(21, 131, 131);
    width: 25%;
-   
+   z-index: 2;
+
 }
 
 .sideNav-menu {
   
-  
-   padding-top: 40px;
+   margin-top: 200px;
    width: 90%;
   
 }
 
-.sideNav-menu li {
+.about-lk, .reservations-lk, .menu-lk, .contact-lk  {
   
   position: relative;
   margin-top: 20px;
@@ -96,34 +180,163 @@ ul {
  
 }
 
-.sideNav-menu li:hover {
+.about-lk:hover, .reservations-lk:hover, .menu-lk:hover, .contact-lk:hover {
   
   transform: scale(1.1);
 }
 
 .cup {
-  display: none;
-}
 
-.cup.active {
-
-  display: inline-block;
   position: absolute;
   left:-15%;
   top:0%;
  
 }
 
-/* --------------------------------------------------------------------------------------- */
+.cocktail {
 
-/* ------------------------IMAGES CONTAINER---------------------------------------------- */
+  position: absolute;
+  right:12%;
+  top: 75%;
+}
 
-.container {
+
+.mini-icon-egg {
+
+  display: inline-block;
+  position: absolute;
+  left: 17%;
+  top: 2%;
+}
+
+.mini-icon-OJ {
+
+  display: inline-block;
+  position: absolute;
+  left: 17%;
+  top: 43%;
+  
+}
+
+.sub-list {
 
   display: none;
 }
 
-.container.active {
+.sub-list.active {
+
+  position: relative;
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 10px;
+
+}
+
+.sub-list-style {
+
+  padding: 5px;
+  font-family: 'karla', sans-serif;
+  cursor: pointer;
+  
+}
+
+@media (max-width: 1000px) {
+
+  .sideNav { 
+   
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    width: 100%;
+    height: 90px;
+
+ }
+
+   .sideNav-menu {
+    
+    display: flex;
+    margin-top: 40px;
+    margin-left: -30px;
+    justify-content: space-around;
+    z-index: 2;
+    
+ }
+ 
+ .about-lk, .reservations-lk, .menu-lk, .contact-lk  {
+   
+   position: relative;
+   font-size: 0.8rem;
+   letter-spacing: 0.1rem;
+   font-family: 'Love Ya Like A Sister', cursive;
+   cursor: pointer;
+ 
+  
+ }
+ .cup {
+
+  display: none;
+  /* position: absolute;
+  left:-15%;
+  top:0%;
+  */
+}
+
+.cocktail {
+
+  position: absolute;
+  right:12%;
+  top: 85%;
+}
+.mini-icon-egg {
+
+  display: none;
+  position: absolute;
+  left: 17%;
+  top: 2%;
+}
+
+.mini-icon-OJ {
+
+  display: none;
+  position: absolute;
+  left: 17%;
+  top: 43%;
+  
+}
+
+.sub-list.active {
+
+  position: absolute;
+  display: flex;
+  top: 100%;
+  left: 15%;
+  }
+
+  .sub-list-style {
+
+    padding: 5px;
+    font-family: 'reenie beanie', sans-serif;
+    font-size: 1.5rem;
+    border: 1px solid black;
+    background-color: rgb(21, 131, 131);
+    border-radius: 5px;
+    margin: 0 5px;
+    width: 50px;
+    text-align: center;
+    cursor: pointer;
+    
+  }
+  
+
+}
+
+/* --------------------------------------------------------------------------------------- */
+
+/* ------------------------IMAGES CONTAINER---------------------------------------------- */
+
+
+.container {
 
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -139,79 +352,29 @@ ul {
 
 }
 
-.img-smaller {
+
+@media (max-width: 1000px) {
+
+  .container {
+
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    height:100%;
+    width: 100%;
+    padding: 5px 0px;
+    border: 2px solid red;
+  }
+
+  .img-smaller {
   
- width: 100%;
- height: 105%;
- object-fit: cover;
- border: none;
-
-}
-
- /* .img-smaller:hover {
-  
- 
- border: 3px solid teal;
- 
- } */
-
-.img-1 {
-
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  
-  
-}
-
-.img-3 {
-
-  grid-row-start: 2;
-  grid-row-end: 4;
-
-}
-
-/* .img-7 {
-
-  grid-column-start: 4;
-  grid-column-end: 6;
-  grid-row-start: 4;
-  grid-row-end: 6;
-} */
-
-.img-8 {
-
-  grid-row-start: 3;
-  grid-row-end: 5;
-}
-
-.img-10 {
-
-  grid-row-start: 4;
-  grid-row-end: 6;
-}
-
-.img-11 {
-
-  grid-column-start: 4;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-}
-
-.img-12 {
-
-  grid-row-start: 3;
-  grid-row-end: 5;
-}
-
-.img-13 {
-
-  grid-column-start: 4;
-  grid-column-end: 5;
-  grid-row-start: 4;
-  grid-row-end: 6;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: none;
+   
+   }
+   
 
 }
 
@@ -220,21 +383,34 @@ ul {
 
 .content-container {
 
-  position: absolute;
-  top: 0%;
-  right: 0%;
-  left: 25%;
-  width: 74%;
-  bottom:0%;
-  padding: 5px;
-  background-color: #f1c1123d;
+ 
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-color: rgb(194, 166, 212);
+
+  
+}
+
+
+.content-container-menu {
+
+  width: 100%;
+  padding: 10px;
+  height: 100%;
+  background-color: rgb(194, 166, 212);
+ 
   
 }
 
 .about {
+  
+  height: 100%;
+}
 
+.reservations {
 
-  height: 150%;
+  height: 170%;
 }
 
 .food {
@@ -242,9 +418,31 @@ ul {
   height: 150%;
 }
 
+.contact-wrapper {
+
+  height: 130%;
+}
+
 .drinks {
 
-  height: 70%;
+  height: 50%;
+}
+
+.img-decor-wrapper {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  height: 300px;
+  
+}
+
+.about-img-decor {
+
+  position: absolute;
+  right:4%;
+  height: 300px;
+  margin-top: 50px;
 }
 
 
@@ -252,155 +450,173 @@ ul {
 .content-header {
 
   text-align: center;
-  margin-top: 100px;
-  font-family: 'Love Ya Like A Sister', cursive;
+  font-family: 'reenie beanie', sans-serif;
+  font-size: 2rem;
 }
+
+
 
 .content-paragraph-box {
 
-  padding-top: 20px;
-  width: 60%;
-  margin: auto;
+  padding: 5px 30px 30px 30px;
+  width: 95%;
+  margin-top: 0%;
+  border-radius: 5px;
+  animation-name: easeIn;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  
+  
+}
+
+@keyframes easeIn {
+
+  0% {
+    margin-top: 100%;
+   
+  }
+
+  100% {
+
+    margin-top: 0%;
+    
+  }
 }
 
 .content-paragraph-box p {
 
- font-size: 1.2rem;
- font-family: 'karla', sans-serif;
+ font-size: 1.5rem;
+ font-family: 'reenie beanie', sans-serif;
  line-height: 2;
+ text-align: center;
+}
+
+.lower-about-para {
+
+  margin-top: 100px;
+}
+
+@media (max-width: 1200px) {
+
+  .content-container {
+
+  
+    margin-top: 90px;
+    margin-left: -10px;
+    height:100%;
+    width: 100%;
+    padding: 5px 10px;
+    background-color: rgb(194, 166, 212);
+ 
+    
+  }
+  
+  
+  .content-container-menu {
+  
+  
+    margin-top: 80px;
+    margin-left: -10px;
+    width: 100%;
+    padding: 5px 10px;
+    background-color: rgb(194, 166, 212);
+    height: 150%;
+    
+  }
+
+  .img-decor-wrapper {
+
+    display: none;
+    
+  }
+  
+  .about-img-decor {
+  
+    display: none;
+   
+  }
+  .content-paragraph-box p {
+
+    font-size: 1rem;
+    font-family: 'reenie beanie', sans-serif;
+    line-height: 2;
+    text-align: center;
+   }
+   .content-paragraph-box {
+
+    width: 85%;
+    margin-top: 3%;
+    border-radius: 5px;
+    animation-name: easeIn;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    
+    
+  }
+
+  .lower-about-para {
+
+    margin-top: -70px;
+  }
+  .food {
+   
+    height: 150%;
+  }
+
 }
 
 /* ----------------------------------------------------------------------------------------- */
-
-/* -----------------------------------MENU BTN PAGE----------------------------------------- */
-
-.menu-btn-wrapper {
-
-  width: 100%;
-  /* margin-top: 150px; */
-  padding: 10px;
-  text-align: center;
-  
-}
-
-.menu-btn {
-
-  padding: 10px 15px;
-  margin: 0px 20px;
-  width: 100px;
-  border-radius: 10px;
-  background: linear-gradient(25deg, rgba(21, 131, 131, 0.733), rgba(142, 219, 219, 0.733));
-  box-shadow: 0 5px 10px rgb(0 0 0 / 0.2);
-  font-family: 'love ya like a sister', sans-serif;
-  font-size: 1.2rem;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  transition-duration: 0.5s;
-  
-
-}
-
-
-.menu-btn:hover {
-
-  box-shadow: 0 10px 15px rgb(0 0 0 / 0.2);
-  background: linear-gradient(25deg, rgba(142, 219, 219, 0.733), rgba(21, 131, 131, 0.733));
-  transition-duration: 1s;
-  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-  transform: scale(1.1);
-}
-
-.cocktail {
-
-  position: absolute;
-  right:15%;
-  top: 54%;
-}
-
-/* .red-wine {
-
-  position: absolute;
-  right:43%;
-  top: 17.5%;
-}
-
-.beer {
-
-  position: absolute;
-  right:45%;
-  top: 17%;
-}
-
-.orangej {
-
-  position: absolute;
-  left: 18.5%;
-  top: 16.8%;
-}
-
-.bourbon {
-
-  position: absolute;
-  left: 20%;
-  top: 44.7%;
-}
-
-.lettuce {
-
-  position: absolute;
-  left: 18%;
-  top: 67%;
-} */
-
-.egg {
-
-  position: absolute;
-  left: 35%;
-  top: 50%;
-}
-
-
 /* ---------------------------------MENU FOOD----------------------------------------------- */
 
 .menu-box {
 
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  border: 2px solid black;
   background-color: white;
   border-radius: 5px;
   padding: 10px 30px;
-  margin: 80px auto;
-  width:80%;
-
+  margin: 50px auto;
+  width:60%;
+  box-shadow: 0 3px 10px rgba(14, 13, 13, 0.548);
+  animation-name: easeInMenu;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
+@keyframes easeInMenu {
+
+  0% {
+    margin-top: 100%;
+   
+  }
+
+  100% {
+
+    margin-top: 5.5%;
+    
+  }
+}
+
+
+
 .menu-header {
-  font-family: 'love ya like a sister', cursive;
+  font-family: 'lobster two', cursive;
   margin: auto;
 }
-
-.border {
-
-  background-color: rgba(21, 131, 131, 0.733);
-  border: 2px solid black;
-  padding:10px;
-  margin:-20px -20px 0px -20px;
-}
-
 
 .brunch-heading {
 
   font-family: 'karla', cursive;
-  text-decoration: underline;
+ 
   
 }
 
 .food-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-
+  
 }
 
 .food-item {
@@ -410,29 +626,34 @@ ul {
   align-items: flex-start;
   margin-top: -20px;
   
+  
 }
 
 .food-item.extras {
 
   margin-top: -5px;
-  border: 2px solid black;
   border-radius: 5px;
   width: 90%;
-  padding: 5px;
+  padding: 5px 5px 5px 15px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  
 }
 
 .food-item.pastries {
 
   margin-top: -5px;
-  border: 2px solid black;
   border-radius: 5px;
   width: 90%;
-  padding: 5px;
+  padding: 5px 5px 5px 15px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
 }
 
 .item-sub {
 
-  font-family: 'love ya like a sister', sans-serif;
+  font-family: 'lobster two', sans-serif;
+
+  
 
 }
 
@@ -441,6 +662,8 @@ ul {
   margin-top: -20px;
   grid-row-start: 2;
   font-family: 'karla', sans-serif;
+  font-size: 0.9rem;
+  text-align: center;
 
 }
 
@@ -449,6 +672,52 @@ ul {
   font-weight: bold;
 }
 
+@media (max-width: 750px) {
+
+
+  .menu-box {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 0px;
+    padding: 10px 5px;
+    margin: 30px auto;
+    width:85%;
+    box-shadow: 0 3px 10px rgba(14, 13, 13, 0);
+    animation-name: easeInMenu;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  @keyframes easeInMenu {
+
+    0% {
+      margin-top: 100%;
+     
+    }
+  
+    100% {
+  
+      margin-top: 9%;
+      
+    }
+  }
+  .brunch-heading {
+
+    font-family: 'karla', cursive;
+    /* text-align: center; */
+    
+  }
+  .food-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    
+  }
+  
+}
+ 
 
 /* ----------------------------------------------------------------------------------- */
 
@@ -461,14 +730,12 @@ ul {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     align-items: center;
-    border: 2px solid black;
-    background-color: white ;
     border-radius: 5px;
     padding: 10px;
-    margin: 40px auto;
+    margin: 60px auto;
     width: 80%;
-    grid-gap: 5px;
-  
+    grid-gap: 10px;
+    
   
 }
 .drink-heading {
@@ -481,6 +748,7 @@ ul {
 .day-start-head {
 
   margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 .drink-square {
@@ -489,9 +757,11 @@ ul {
   justify-self: stretch;
   align-self: stretch;
   text-align: start;
-  border: 2px solid black;
-  background-color: rgba(21, 131, 131, 0.733);
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(14, 13, 13, 0.548);
 }
+
 
 .para-description {
 
@@ -501,6 +771,7 @@ ul {
   margin-left: 20px;
   
 }
+
 
 .harder-stuff {
 
@@ -548,13 +819,103 @@ ul {
   font-size: 4rem;
   font-family:'Lobster Two', sans-serif ;
   text-align: center;
-  color: white;
+  color: black;
 }
 
 .sub-happy-hour {
 
   margin-top: -50px;
   text-align: center;
+}
+
+
+@media (max-width: 750px) {
+
+  .drink-box {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    padding: 1px;
+    margin: 60px auto;
+    width: 80%;
+    }
+    
+    .day-start-head {
+    
+      margin-top: 10px;
+      margin-bottom: 0px;
+    }
+    
+    .drink-square {
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+      background-color: rgba(255, 255, 255, 0);
+      border-radius: 5px;
+      box-shadow: 0 3px 10px rgba(14, 13, 13, 0);
+    }
+    
+    
+    .para-description {
+    
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+      margin-left: 20px;
+      
+    }
+    
+    .harder-stuff {
+    
+      margin-top: 3px;
+    }
+    
+    .para-description-cocktails {
+    
+      margin-bottom: 0px;
+      margin-left: 10px;
+      font-family: 'karla', sans-serif;
+      
+    }
+    
+    
+    .price {
+    
+      font-weight: bold;
+      margin-left: 15px;
+    }
+
+    .happy-hour {
+
+      position: relative;
+      box-shadow: 0 3px 10px rgba(14, 13, 13, 0.726);
+    }
+
+    .cocktail {
+
+      position: absolute;
+      right:11%;
+      top: 62%;
+    }
+    
+    
+    .happy-hour-style {
+    
+      margin-top: 40px;
+      font-size: 3rem;
+      font-family:'Lobster Two', sans-serif ;
+      text-align: center;
+      color: black;
+      
+    }
+    
+    .sub-happy-hour {
+    
+      margin-top: -20px;
+      text-align: center;
+    }
 }
 
 
@@ -565,31 +926,234 @@ ul {
 
 .contact-info-wrapper {
 
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: auto;
+  
 }
 
 
-.location , .contact, .hours {
 
-  border-right: 2px solid black;
-  margin-top: 50%;
-  padding: 30px;
-  text-align: center;
+.location {
+  
+  text-align: start;
+  animation-name: location;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  
 }
 
-.hours {
-   
-  border: none;
+.contact {
+  
+  text-align: end;
+  animation-name: contact;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  
 }
+
+
+
+@keyframes contact {
+
+  0% {
+    margin-right: -120%;
+    margin-left: 120%;
+  }
+
+  100% {
+
+    margin-right: 0;
+    margin-left: 0;
+    
+  }
+}
+
+@keyframes location {
+
+  0% {
+    margin-right: 120%;
+    margin-left: -120%;
+  }
+
+  100% {
+
+    margin-right: 0;
+    margin-left: 0;
+    
+  }
+}
+
+
 
 .contact-header {
 
-  font-family: 'love ya like a sister', cursive;
+  font-family: 'reenie beanie', sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  z-index: 1;
 }
 
 .contact-info {
 
-  font-family: 'karla', cursive;
+  font-family: 'reenie beanie', sans-serif;
+  font-size: 1.7rem;
+  z-index: 1;
+}
+
+.google-btn {
+
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 30px;
+  border: none;
+  outline: none;
+  background-color: rgb(194, 166, 212);
+  
+}
+
+.google-btn:hover {
+
+  transform: scale(1.1);
+  background-color: rgb(172, 129, 201);
+}
+.google-link {
+
+  text-decoration: none;
+  color: black;
+  font-family: 'love ya like a sister', sans-serif;
+
+}
+
+.open-hours {
+
+  margin-top: 15px;
+  margin-left: 50px;
+  text-align: start;
+ 
+}
+
+.hours-info {
+
+  
+  font-size: 1.3rem;
+  margin-left: -10px;
+  font-family: 'love ya like a sister', sans-serif;
+  text-align: start;
+  
+}
+
+.line-break-contact {
+
+  position: absolute;
+  width:40%;
+  height: 1px;
+  left: 10%;
+  bottom: 28%;
+  background-color: black;
+}
+
+@media (max-width: 750px) {
+
+
+  .contact {
+
+    animation-duration: 0s;
+    
+  }
+
+  .location {
+  
+    animation-duration: 0s;
+  }
+  .contact-header {
+
+    font-family: 'reenie beanie', sans-serif;
+    font-weight: bold;
+    font-size: 1.9rem;
+   
+  }
+
+  .contact-info {
+
+    font-family: 'reenie beanie', sans-serif;
+    font-size: 1.4rem;
+   
+  }
+
+  .hours-info {
+
+  
+    font-size: 1rem;
+    margin-left: -10px;
+    font-family: 'love ya like a sister', sans-serif;
+    text-align: start;
+    
+  }
+  
+
+}
+
+/* -----------------FOOTER---------------------------------------------- */
+
+footer {
+
+  position: fixed;
+  left: 0%;
+  bottom: 0%;
+  width: 100%;
+  z-index: 5;
+  background-color: rgba(194, 166, 212, 0);
+  height:20px;
+}
+
+.copyright-footer {
+
+  margin-top: 2px;
+  margin-left: 200px;
+  text-align: start;
+  font-family: 'reenie beanie', sans-serif;
+  opacity: 40%;
+}
+@media (max-width: 1200px) {
+
+  footer {
+
+   
+    bottom: 0%;
+    right: 0%;
+    
+  }
+  
+  .copyright-footer {
+  
+    text-align: start;
+    margin-left: 100px;
+ 
+    
+   
+  }
+}
+
+
+@media (max-width: 1000px) {
+
+  footer {
+
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    width: 100%;
+    background-color: rgb(21, 131, 131);
+  }
+  
+  .copyright-footer {
+  
+    text-align: end;
+    margin-right: 10px;
+    padding-bottom: 5px;
+    font-family: 'reenie beanie', sans-serif;
+   
+  }
 }
