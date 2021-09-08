@@ -1,17 +1,44 @@
+import { useState } from 'react';
+import Gallery from './Gallery';
+import Modal from './Modal'
 import ImageData from '../Data/image-data';
 
-const ImagePane = () => {
+const ImagePane = ({ gallery, sm}) => {
 
-    const randomImage = () => {
+    const [showImages, setImages] = useState('three');
+    const [showGallery, setGallery] = useState(true);
 
-        
-    }
-    return ( 
-        <div className="container">
-        
-       
-        </div>
-     );
+
+  
+
+     if(sm === false) {
+
+        return (
+
+            <div className="content-container">
+                         <div className="image-container">
+                                    <img className="img-smaller" src={ImageData[0]} alt="" />
+                                    <img className="img1" src={ImageData[1]} alt="" />
+                                    <img className="img3" src={ImageData[2]} alt="" />
+                                    <div className="gallery-img"> <button onClick={gallery} className="gallery-btn" >Click here to see <br /> more pics..</button></div>
+                                    <div className="overlay-background"></div>
+                               <div>
+                                  
+                               </div>
+                         </div>
+            </div>
+        )
+     } else {
+        return (
+            <div>
+                    {showGallery ? <Gallery /> : null}
+                    {sm ? <Modal closeModal={gallery} /> : null}
+           </div>
+        )}
+   
+
+   
+   
 }
 
  

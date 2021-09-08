@@ -15,10 +15,12 @@ const About = () => {
 
                     <p className="para-about-us"> {AboutData.paraOne} </p>
                     <div className="img-decor-wrapper">
-                    <p style={{ width: "90%"}}> {AboutData.paraTwo} </p>
-                    <img className="about-img-decor" src="cafedecor.jpg" alt="inside cafe" />
-                    </div><br/><br/><br/>
-                    <p className="lower-about-para" style={{  width: "95%"}}> {AboutData.paraThree} </p>
+                        <img className="about-img-decor" src="cafedecor.jpg" alt="inside cafe" />
+                        <img className="img-smaller img-14" src="coffees.jpg" alt="coffees" />
+                    </div><br /><br />
+                    <p style={{ width: "95%"}}> {AboutData.paraTwo} </p>
+                    
+                    <p style={{  width: "95%"}}> {AboutData.paraThree} </p>
                 </div>
 
         </div>

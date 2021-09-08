@@ -29,7 +29,7 @@ const FoodData = {
         },
         item6: {
             heading: 'Full Kiwi',
-            description: 'Your choice of Eggs / 2 Pork Sausages / 2 rashers of crispy Bacon / Grilled Mushrooms / Kumara Fries',
+            description: 'Your choice of Eggs, 2 Pork Sausages, 2 rashers of crispy Bacon, Grilled Mushrooms, Kumara Fries',
             price: 12
         },
         item7: {
@@ -70,6 +70,33 @@ const FoodData = {
             description: 'Potatoes / Tuna / Green Beans / Onions / Tomato',
             price: 10
         },
+    },
+
+    nibbles: {
+
+        item1: {
+            heading: 'Charcuterie Board (2ppl)',
+            description: 'Saucisson, Iberico Ham, Pate, gherkins, Sourdough bread',
+            price: 12
+        },
+
+        item2: {
+            heading: 'Cheese Board (2ppl)',
+            description: 'Black Bomber Cheddar, St Felicien cows cheese, Dorset goats Cheese, Stilton, Sourdough bread',
+            price: 10
+        },
+
+        item3: {
+            heading: 'Veggie bites',
+            description: 'Hummous, Guacamole, Tzatiki, Olives, Sourdough bread, Carrots, celery',
+            price: 8
+        },
+
+        item4: {
+            heading: 'Monster Platter (5-6ppl)',
+            description: 'All of the above rolled into one',
+            price: 18
+        }
     }
 }
 export default FoodData;
