@@ -1,7 +1,7 @@
 const BurgerMenu = ({ openBurger, hb }) => {
 
 
-    if(hb === "false") {
+    if(hb === false) {
         return ( 
         <div id="burger-box" className="burger-box" onClick={openBurger}>
             <div className="burger-t"></div>

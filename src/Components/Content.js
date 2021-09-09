@@ -13,7 +13,7 @@ const Content = () => {
 
     const [whichComponent, setChange] = useState("");
     const [showMenu, setMenu] = useState("");
-    const [burger, setBurger] = useState("false");
+    const [burger, setBurger] = useState(false);
 
     const [showModal, setModal] = useState(false);
 
@@ -23,44 +23,30 @@ const Content = () => {
         
         }
         const closeNav = () => {
-    
-            const overlay = document.querySelector('.nav-overlay')
-            const nav = document.querySelector('.sideNav')
-            const navMenu = nav.querySelector('.sideNav-menu')
-
-            setBurger('false')
-            nav.classList.remove('active')
-            overlay.classList.remove('active')
-            navMenu.classList.remove('active')
-    
+            setBurger(false)
         }
     
         const openNav = () => {
-
-    
-            setBurger('true')
-            // nav.classList.add('active')
-            // navMenu.classList.add('active')
-         
+            setBurger(true)
         }
 
         const changeFood = (e) => {
 
             setModal(true)
             setMenu("Food");
-            closeNav()
+          
         }
         const changeDrinks = (e) => {
     
             setModal(true)
             setMenu("Drinks");
-            closeNav()
+            
         }
     
         const burgerClick = (e) => {
-                if( burger === 'false') {
+                if( !burger ) {
                       openNav()
-                  } else if(burger === 'true') {
+                  } else if( burger ) {
                       closeNav()
                   }
         
@@ -71,29 +57,27 @@ const Content = () => {
             if(e.target.classList.contains('about-lk')) {
                 setChange("About")
                 window.scrollTo(0, 0)
-                document.body.setAttribute('style', '')
                 closeNav()
     
             } else if (e.target.classList.contains('menu-lk')) {
                 setChange("Menu")
-                window.scrollTo(0, 0)
-                document.body.setAttribute('style', '')
+                window.scrollTo(0, 0)      
                 closeNav()
     
             } else if(e.target.classList.contains('reservations-lk')) {
                 setChange("Reservations")
-                window.scrollTo(0, 0)
-                document.body.setAttribute('style', 'overflow:hidden')
+                window.scrollTo(0, 0)        
                 closeNav()
     
             } else if(e.target.classList.contains('contact-lk')) {
                 
                 setChange("Contact")
                 window.scrollTo(0, 0)
-                document.body.setAttribute('style', 'overflow:hidden')
                 closeNav()
                 
-            } 
+            } else {
+                console.log('error')
+            }
         }
     
         
@@ -104,7 +88,7 @@ const Content = () => {
                 <NavBar openBurger={burgerClick} onClick={onClick} onFood={changeFood} onDrinks={changeDrinks} fb={showMenu} cc={whichComponent} hb={burger} gallery={galleryClick}/>
             </div>
         <div className="content-page-style">
-        {burger ? <div className="nav-overlay"></div> : null}
+        {burger  ? <div className="nav-overlay"></div> : null}
         { whichComponent === "" && <Images gallery={galleryClick} sm={showModal} /> }
         { whichComponent === "About" ? <About /> : null }
         { whichComponent === "Menu" ? <Menu onFood={changeFood} onDrinks={changeDrinks}  fb={showMenu} sm=  {showModal} gallery={galleryClick} /> : null }

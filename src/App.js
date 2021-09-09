@@ -1,5 +1,5 @@
 import './index.css';
-// import Loading from './loading';
+// import Loading from './Components/loading';
 import Content from './Components/Content'
 
 function App() {

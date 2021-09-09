@@ -136,20 +136,27 @@ ul {
 
 .loadingPage-wrapper {
 
-  margin-top: 12%;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
   text-align: center;
-  width: 100%;
-  height:100%;
   background-color: oldlace;
+  z-index: 40;
+ 
 }
-
 
 .loading-header {
 
-  font-size: 2.5rem;
-  font-family: 'Love Ya Like A Sister', cursive;
-  margin-left: 40px;
+  width: 700px;
+  height: 400px;
+  transform: scale(1);
+  animation-name: scale;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
 
 .loading-btn {
 
@@ -260,27 +267,6 @@ ul {
   
 }
 
-.sub-list {
-
-  display: none;
-}
-
-.sub-list.active {
-
-  position: relative;
-  display: inline-block;
-  margin-top: 5px;
-  margin-left: 10px;
-
-}
-
-.sub-list-style {
-
-  padding: 5px;
-  font-family: 'karla', sans-serif;
-  cursor: pointer;
-  
-}
 
 @media (max-width: 1000px) {
 
@@ -344,8 +330,6 @@ ul {
   width: 100%;
   background-color: rgb(41, 40, 40);
   z-index: 30;
-  
-
 
 }
 
@@ -452,14 +436,14 @@ ul {
   
 }
 
-  .img-smaller {
+.img-smaller {
   
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border: none;
-    border-radius: 6px;
-    z-index: 0;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border: none;
+  border-radius: 6px;
+  z-index: 0;
 }
 
 .img1 {
@@ -540,10 +524,11 @@ ul {
 
   .image-container {
 
+
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 300px 300px;
-    max-width: 90%;
-    margin: auto;
+    max-width: 101%;
+    margin: -22px auto;
     z-index: 2;
     
   }
@@ -560,9 +545,7 @@ ul {
 
    display: none;
   }
-  
-  
-  
+   
   .img3 {
     
     grid-row: 2;
@@ -661,6 +644,9 @@ ul {
   margin: 25px auto;
   height: 450px;
   width: 700px;
+  animation-name: fade;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
   .img-slide {
@@ -669,8 +655,8 @@ ul {
     border-radius: 6px;
     height: 450px;
     width: 700px;
-    }
-  
+   
+  }
 
   .arrow-left {
 
@@ -684,10 +670,8 @@ ul {
 
   .arrow-left:hover {
 
-    
     transform: rotate(180deg) scale(1.1);
    
-    
   }
 
   .arrow-right {
@@ -829,30 +813,9 @@ ul {
   width: 100%;
   padding: 10px;
   height: 110%;
-  background-color: rgb(206, 110, 97);
+  background-color: rgb(206, 110, 97); 
+  }
   
-}
-
-.about {
-  
-  height: 100%;
-}
-
-.reservations {
-
-  height: 170%;
-}
-
-
-.contact-wrapper {
-
-  height: 130%;
-}
-
-.drinks {
-
-  height: 50%;
-}
 
 .img-decor-wrapper {
 
@@ -873,16 +836,12 @@ ul {
 
 }
 
-
-
 .content-header {
 
   text-align: center;
   font-family: 'reenie beanie', sans-serif;
   font-size: 2rem;
 }
-
-
 
 .content-paragraph-box {
 
@@ -893,7 +852,6 @@ ul {
   animation-name: easeIn;
   animation-duration: 2s;
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-  
   
 }
 
@@ -951,10 +909,9 @@ ul {
     height: 100%;
     z-index: 0;
     overflow-y: hidden;
-    
+  
   }
 
-  
   .content-paragraph-box p {
 
     font-size: 1rem;
@@ -973,12 +930,6 @@ ul {
     
     
   }
-
-  .lower-about-para {
-
-    margin-top: -70px;
-  }
-
    .cocktail {
 
       display: none;
@@ -1042,9 +993,7 @@ ul {
   justify-content: center;
   width: 100%;
 
-
-} 
-
+}
 .svg-drink {
 
   position: absolute;
@@ -1622,10 +1571,6 @@ ul {
 .drink-square {
   display: flex;
   flex-direction: column;
-  /* justify-self: stretch; */
-  /* align-self: stretch; */
-  /* text-align: start; */
-  
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 3px 10px rgba(14, 13, 13, 0.548);
