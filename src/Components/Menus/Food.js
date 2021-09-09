@@ -37,7 +37,6 @@ const Food = () => {
                     <h5 className="item-sub">{FoodData.brunch.item6.heading}</h5>
                     <p className="item-description">{FoodData.brunch.item6.description}<span className="item-price">{FoodData.brunch.item6.price}</span></p>
             </div>
-          
             <div className="food-item">
                     <h5 className="item-sub">{FoodData.salad.item1.heading}</h5>
                     <p className="item-description">{FoodData.salad.item1.description} <br /> <span className="item-price">{FoodData.salad.item1.price}</span></p>
@@ -66,7 +65,7 @@ const Food = () => {
                 </div>
            
           
-           <div className="aperol-inner">
+           <div className="food-container aperol-inner">
              <h3 className="nibbles-heading">Nibbles</h3>
                         <div className="food-item nibbles">
                         <h5 className="item-sub">{FoodData.nibbles.item1.heading}</h5>

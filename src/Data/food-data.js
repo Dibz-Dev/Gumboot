@@ -33,7 +33,7 @@ const FoodData = {
             price: 12
         },
         item7: {
-            heading: 'Add-ons:',
+            heading: 'Add-ons',
             description: 'Bacon / Eggs / Salmon / Smashed Avo / Sausages / Kumara Fries / Hash B"s',
             price: 3
         },

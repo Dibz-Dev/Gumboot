@@ -37,14 +37,11 @@ const Content = () => {
     
         const openNav = () => {
 
-            const overlay = document.querySelector('.nav-overlay')
-            const nav = document.querySelector('.sideNav')
-            const navMenu = nav.querySelector('.sideNav-menu')
     
             setBurger('true')
-            nav.classList.add('active')
-            navMenu.classList.add('active')
-            overlay.classList.add('active')
+            // nav.classList.add('active')
+            // navMenu.classList.add('active')
+         
         }
 
         const changeFood = (e) => {
@@ -61,9 +58,7 @@ const Content = () => {
         }
     
         const burgerClick = (e) => {
-    
-           
-                  if( burger === 'false') {
+                if( burger === 'false') {
                       openNav()
                   } else if(burger === 'true') {
                       closeNav()
@@ -72,39 +67,33 @@ const Content = () => {
         }
 
         const onClick = (e) => {
-
-       
-            let html = document.querySelector('html')
     
             if(e.target.classList.contains('about-lk')) {
                 setChange("About")
                 window.scrollTo(0, 0)
-                html.setAttribute('style', '')
+                document.body.setAttribute('style', '')
                 closeNav()
     
             } else if (e.target.classList.contains('menu-lk')) {
                 setChange("Menu")
                 window.scrollTo(0, 0)
-                html.setAttribute('style', '')
+                document.body.setAttribute('style', '')
                 closeNav()
     
             } else if(e.target.classList.contains('reservations-lk')) {
                 setChange("Reservations")
                 window.scrollTo(0, 0)
-                html.setAttribute('style', 'overflow-y:hidden')
+                document.body.setAttribute('style', 'overflow:hidden')
                 closeNav()
     
             } else if(e.target.classList.contains('contact-lk')) {
                 
                 setChange("Contact")
                 window.scrollTo(0, 0)
-                html.setAttribute('style', 'overflow-y:hidden')
+                document.body.setAttribute('style', 'overflow:hidden')
                 closeNav()
                 
-            } else {
-                console.log('error')
-            }
-                
+            } 
         }
     
         
@@ -115,7 +104,7 @@ const Content = () => {
                 <NavBar openBurger={burgerClick} onClick={onClick} onFood={changeFood} onDrinks={changeDrinks} fb={showMenu} cc={whichComponent} hb={burger} gallery={galleryClick}/>
             </div>
         <div className="content-page-style">
-        <div className="nav-overlay"></div>
+        {burger ? <div className="nav-overlay"></div> : null}
         { whichComponent === "" && <Images gallery={galleryClick} sm={showModal} /> }
         { whichComponent === "About" ? <About /> : null }
         { whichComponent === "Menu" ? <Menu onFood={changeFood} onDrinks={changeDrinks}  fb={showMenu} sm=  {showModal} gallery={galleryClick} /> : null }

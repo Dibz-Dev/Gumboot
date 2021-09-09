@@ -10,7 +10,7 @@ html {
   background-color: rgb(206, 110, 97);
   box-sizing: border-box;
   z-index: 5;
-  height: 100%;
+  height: 60%;
   overflow-x: hidden;
 }
 
@@ -103,7 +103,7 @@ ul {
     position: fixed;
     top: 0%;
     left: 0%;
-    width: 400px;
+    width: 300px;
     margin-top: -10px;
     margin-left: -40px;
     
@@ -290,6 +290,7 @@ ul {
     position: absolute;
     right: 5%;
     top: 20%;
+    cursor: pointer;
 
  }
 
@@ -333,7 +334,7 @@ ul {
   
 }
 
-.nav-overlay.active {
+.nav-overlay {
 
   display: inline-block;
   position: absolute;
@@ -411,47 +412,7 @@ ul {
   right:12%;
   top: 85%;
 }
-/* .mini-icon-egg {
 
-  position: absolute;
-  left: -17%;
-  top: 10%;
-}
-
-.mini-icon-OJ {
-
-  position: absolute;
-  left: -12%;
-  top: 0%;
-  
-} */
-
-/* .sub-list {
-
-   display: none;
-   flex-direction: column;
-   margin-left: 80px;
-  
-} */
-
-/* .sub-list.active {
-
-   display: flex;
-   flex-direction: column;
-   margin-left: 80px;
-  
-
-}
-
-.sub-list-style {
-
-  position: relative;
-  display: inline-block;
-  margin-top: 5px;
-  margin-left: 10px;
- 
-
-} */
 
 .img-smaller {
   
@@ -483,7 +444,7 @@ ul {
 
   position: relative;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 300px 300px;
   max-width: 70%;
   margin: auto;
@@ -560,11 +521,25 @@ ul {
  
 }
 
+
+@media (max-width: 1000px) {
+
+  .image-container {
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    max-width: 90%;
+    margin: auto;
+    z-index: 2;
+    
+  }
+
+}
+
 @media (max-width: 750px) {
 
   .image-container {
 
-    
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 300px 300px;
     max-width: 90%;
@@ -630,22 +605,19 @@ ul {
   position: absolute;
   top: 0%;
   bottom: -120%;
-  height: 150%;
+  height: 250%;
   left: 0%;
   right: -20%;
   background-color: rgba(31, 30, 30, 0.884);
   z-index: 10;
-  
  
-  
 }
-
 
 .modal-close {
 
   position: absolute;
   top: 10%;
-  right: 20%;
+  right: 10%;
   color: white;
   font-size: 3em;
   z-index: 12;
@@ -654,18 +626,7 @@ ul {
 
 @media (min-width: 1000px) {
 
-  .modal-overlay {
 
-    position: absolute;
-    top: 0%;
-    bottom: 0%;
-    height: 150%;
-    left: 0%;
-    right: 0%;
-    background-color: rgba(31, 30, 30, 0.884);
-    z-index: 10;
-     
-  }
   .modal-close {
 
     position: absolute;
@@ -673,8 +634,9 @@ ul {
     right: 10%;
     color: white;
     font-size: 3em;
-    z-index: 12;
+    z-index: 30;
     cursor: pointer;
+
   }
 }
 
@@ -687,7 +649,6 @@ ul {
   left: 50%;
   transform: translate(-50%);
   width: 70%;
-  background-color: rgb(21, 131, 131);
   border-radius: 6px;
   height: 500px;
   z-index: 20;
@@ -704,7 +665,7 @@ ul {
 
   .img-slide {
 
-    
+    border: 5px solid white;
     border-radius: 6px;
     height: 450px;
     width: 700px;
@@ -714,9 +675,8 @@ ul {
   .arrow-left {
 
     position: absolute;
-    left: 7%;
+    left: 8%;
     top: 40%;
-    margin-right: 20px;
     transform: rotate(180deg);
     cursor: pointer;
     
@@ -735,7 +695,6 @@ ul {
     position: absolute;
     right: 7%;
     top: 40%;
-    margin-left: 20px;
     cursor: pointer;
   }
 
@@ -744,13 +703,112 @@ ul {
    transform: scale(1.1);
   }
 
-  @media (max-width: 750) {
+  @media (max-width: 1000px) {
 
-    
+    .gallery-wrapper {
+
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%);
+      width: 80%;
+      border-radius: 6px;
+      height: 380px;
+      z-index: 20;
+    }
+
+    .gallery-slide {
+
+ 
+      border-radius: 6px;
+      margin: 25px auto;
+      height: 450px;
+      width: 700px;
+      }
+
+    .img-slide {
+
+      border: 5px solid white;
+      margin-left: 25px;
+      border-radius: 6px;
+      height: 320px;
+      width: 560px;
+      }
+  
   }
 
 
+  @media (max-width: 750px) {
 
+    .gallery-wrapper {
+
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%);
+      width: 80%;
+      background-color: rgba(21, 131, 131, 0);
+      border-radius: 6px;
+      height: 380px;
+      z-index: 20;
+    }
+
+    .gallery-slide {
+
+      border-radius: 6px;
+      margin: 25px auto;
+      height: 450px;
+      width: 100%;
+      }
+
+    .img-slide {
+
+      border:5px solid white;
+      margin-left: 15px;
+      border-radius: 6px;
+      height: 250px;
+      width: 90%
+      }
+
+      .arrow-left {
+
+        position: absolute;
+        left: 8%;
+        top: 40%;
+        transform: rotate(180deg);
+        cursor: pointer;
+        
+      }
+      .arrow-right {
+
+        position: absolute;
+        right: 7%;
+        top: 40%;
+        cursor: pointer;
+      }
+
+
+    .modal-overlay {
+
+      position: absolute;
+      top: 0%;
+      bottom: -120%;
+      height: 300%;
+      left: 0%;
+      right: -20%;
+      background-color: rgba(31, 30, 30, 0.884);
+      z-index: 10;
+       
+    }
+  }
+
+@media (max-width: 340px) {
+
+  .modal-overlay {
+
+  height: 300%;
+  }
+}
 /* ------------------------------------------------------------------------------------------- */
 /* -------------------------------ABOUTUS----------------------------------------------------- */
 
@@ -758,7 +816,6 @@ ul {
 
  
   width: 90%;
-  height: 100%;
   margin-left: 80px;
   padding: 20px;
   background-color: rgb(206, 110, 97);
@@ -771,10 +828,8 @@ ul {
 
   width: 100%;
   padding: 10px;
-  height: 110vh;
+  height: 110%;
   background-color: rgb(206, 110, 97);
-  
- 
   
 }
 
@@ -871,7 +926,7 @@ ul {
 
 @media (max-width: 1000px) {
 
-  .content-container {
+   .content-container {
 
     margin-top: 90px;
     margin-left: -10px;
@@ -923,10 +978,7 @@ ul {
 
     margin-top: -70px;
   }
-  .food {
-   
-    height: 150%;
-  }
+
    .cocktail {
 
       display: none;
@@ -936,7 +988,30 @@ ul {
     }
 
     
+     
+}
+
+@media (max-width: 750px) {
+
+  .about-img-decor {
+
+    position: absolute;
+    right:2%;
+    height:0px;
+    width: 0px;
+    margin-top: 50px;
+    border-radius: 6px;
     
+  }
+
+  .img-14 {
+
+    height: 300px;
+    width: 100%;
+    
+  }
+  
+ 
 }
 
 /* ----------------------------------------------------------------------------------------- */
@@ -955,27 +1030,10 @@ ul {
   width:75%;
   height: 620px;
   box-shadow: 0 3px 10px rgba(14, 13, 13, 0.548);
-  animation-name: easeInMenu;
-  animation-duration: 2s;
-  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-  z-index: 20;
-  
-  
+  z-index: 10;
+
 }
 
-@keyframes easeInMenu {
-
-  0% {
-    margin-top: 100%;
-   
-  }
-
-  100% {
-
-    margin-top: 5.5%;
-    
-  }
-}
 .svg-btn-wrapper {
 
   display: flex;
@@ -1054,7 +1112,7 @@ ul {
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 100%;
+  width: 98%;
   margin-top: 60px;
   
  
@@ -1068,19 +1126,26 @@ ul {
   grid-column: 4;
   grid-row: 1 / 2;
   border: none;
+  width: 100%;
  
 }
 
 .two-inner {
   
- border: 3px solid black;
- height:150px;
- padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  height:150px;
+  width: 95%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
 }
 
 .aperol-inner {
 
+  display: flex;
+  flex-direction: column;
   border: 3px solid black;
   height:374px;
   padding-top: 10px;
@@ -1099,29 +1164,21 @@ ul {
   padding: 0px;
   margin-top: 5px;
   margin-left: 10px;
-  /* border: 1px solid blue; */
+ 
 }
 
 .food-item.nibbles {
 
-  
   border-radius: 5px;
   width: 80%;
-  padding: 25px 5px 0px 15px;
- 
-
-  
+  padding: 25px 5px 0px 15px; 
 }
 
 .food-item.extras {
 
-  
   border-radius: 5px;
   width: 80%;
   padding: 10px 5px 0px 15px;
-  /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); */
-
-  
 }
 
 .food-item.pastries {
@@ -1130,7 +1187,6 @@ ul {
   border-radius: 5px;
   width: 80%;
   padding: 5px 5px 5px 15px;
-  /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); */
 
 }
 
@@ -1142,13 +1198,6 @@ ul {
   padding: 3px 8px;
 }
 
-.sweets-heading {
-
-
-  border: 2px solid black;
-  padding: 3px 8px;
-}
-
 .nibbles-heading {
 
   font-family: 'karla', cursive;
@@ -1180,153 +1229,258 @@ ul {
   font-weight: bold;
 }
 
-@media (max-width: 750px) {
+@media (min-width: 1000px) {
+
+  .cocktail {
+
+    display: none;
+    position: absolute;
+    right:3%;
+    top: 55%;
+  }
+  
+  .svg-drink {
+
+    position: absolute;
+    top: 40%;
+    right: 10%;
+    cursor: pointer;
+  }
+  
+  
+  .svg-food {
+  
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    cursor: pointer;
+  }
+
+  .menu-spec {
+  
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    font-family: 'love ya like a sister', sans-serif;
+    font-size: 30px; 
+ }
+}
+
+@media (max-width: 1000px) {
 
 
   .menu-box {
 
     position: relative;
     display: grid;
-    grid-template-columns: 1fr;
-    justify-content: space-around;
-    background-color: rgba(255, 255, 255, 0);
-    border-radius: 0px;
-    padding: 10px 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0px 20px 30px 20px;
     margin: 100px auto 0px auto;
-    width:100%;
+    width:80%;
+    height: 620px;
+    box-shadow: 0 3px 10px rgba(14, 13, 13, 0.548);
+    z-index: 10;
+  
+  }
+  .svg-drink {
+
+    position: absolute;
+    top: 40%;
+    right: 10%;
+    cursor: pointer;
+  }
+  
+  
+  .svg-food {
+  
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    cursor: pointer;
+  }
+  
+  .menu-spec {
+  
+     position: absolute;
+     top: 10%;
+     left: 60%;
+     font-family: 'love ya like a sister', sans-serif;
+     font-size: 30px; 
+  }
+  
+  .menu-spec2 {
+  
+    position: absolute;
+     top: 70%;
+     left: 30%;
+    font-family: 'love ya like a sister', sans-serif;
+    font-size: 30px; 
+   
+  }
+}
+
+ @media (max-width: 750px) {
+
+
+  .menu-box {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0);
+    height: 100%;
     box-shadow: 0 3px 10px rgba(14, 13, 13, 0);
-    animation-name: easeInMenu;
-    animation-duration: 2s;
-    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-    
+    animation-duration: 0s;
   }
-  @keyframes easeInMenu {
+ 
 
-    0% {
-      margin-top: 100%;
-     
-    }
-  
-    100% {
-  
-      margin-top: -8%;
-      
-    }
+  .food-container {
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: none;
+
   }
-  .gumboot-logo {
 
-    position: fixed;
-    top: 0%;
-    left: -5%;
-    width: 300px;
+  .food-item {
+  
+    display: grid;
+    grid-template-columns: 1fr;
+    align-self: center;
+    height: 50px;
+    width: 100%;
+    padding: 0px;
+    margin-top: 10px;
+    margin-left: 10px;
+  
+  }
+
+  .item-sub {
+
+    font-family: 'lobster two', sans-serif;
+    margin-top: -10px;
+    color: white;
+  
+  }
+  
+  .item-description {
+  
+    margin-top: -40px;
+    font-family: 'karla', sans-serif;
+    font-size: 0.7rem;
+    text-align: center;
+    color: white;
+  
+  }
+  
+  .item-price {
+    margin-left: 20px;
+    font-weight: bold;
+    color: white;
   }
 
   .brunch-heading {
 
     font-family: 'karla', cursive;
+    margin-top: -100px;
+    margin-bottom: 20px;
+    border: 2px solid white;
+    padding: 5px 8px;
     color: white;
-    border: 1px solid white;
-
   }
-  .food-container {
-
-    display: flex;
-    flex-direction: column;
-    grid-template-columns: 1fr;
+  
+  .nibbles-heading {
+  
+    font-family: 'karla', cursive;
+    border: 2px solid white;
+    width: 60px;
+    margin: auto;
+    margin-top: 70px;
+    padding: 3px 8px;
+    color: white;
+  }
+  .two-inner {
+  
     width: 100%;
+    margin-top: -80px;
     border: none;
-    
+    height:150px;
+    padding-top: 0px;
+   
+   }
+   
+   .aperol-inner {
+   
+     border: none;
+     height: 450px;
+     padding-top: 10px;
+     margin-top: 3px;
+   }
+
+   .food-item.extras {
+
+    border-radius: 5px;
+    width: 80%;
+    padding: 15px 15px;
+    border: 2px solid white;
+  }
+
+  .food-item.pastries {
+
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 80%;
+    padding: 15px 15px;
+    border: 2px solid white;
+  }
+
+  .svg-drink {
+
+    position: absolute;
+    top: 45%;
+    right: 10%;
+    cursor: pointer;
+    width: 200px;
+    height: 150px;
+  }
+
+  .svg-food {
+
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    cursor: pointer;
+    width: 200px;
+    height: 150px;
   }
   
-  .img-decor-wrapper {
+  .menu-spec {
 
-    display: none;
-    
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    font-family: 'love ya like a sister', sans-serif;
+    font-size: 25px; 
+ }
+ 
+ .menu-spec2 {
+ 
+   position: absolute;
+   top: 70%;
+   left: 20%;
+   font-family: 'love ya like a sister', sans-serif;
+   font-size: 25px; 
+  
+ }
+
+ 
   }
-  
-  .about-img-decor {
-  
-    display: none;
-   
-  }
-
-  /* .sub-list {
-
-    display: none;
-    flex-direction: column;
-    margin-left: 50px;
-    color: white;
-   
- }
- 
- .sub-list.active {
- 
-    display: flex;
-    flex-direction: column;
-    margin-top: -15px;
-    margin-left: 50px;
-    color: white;
-   
- 
- } */
-
-
-.nibbles-heading {
-
-  font-family: 'karla', cursive;
-  border: 1px solid white;
-  width: 60px;
-  margin: auto;
-  padding: 3px 8px;
-  color: white;
-
-}
-
-.item-sub {
-
-  font-family: 'lobster two', sans-serif;
-  margin-top: -10px;
-  color: white;
-
-}
-
-.item-description {
-
-  margin-top: -40px;
-  font-family: 'karla', sans-serif;
-  font-size: 0.7rem;
-  text-align: center;
-  color: white;
-}
-
-.item-price {
-  margin-left: 20px;
-  font-weight: bold;
-  color: white;
-}
-
-.two-inner {
-  
-  border: none;
-  height:150px;
-  padding-top: 10px;
-  width: 100%;
- }
- 
- .aperol-inner {
- 
-   border: none;
-   height:374px;
-   padding-top: 10px;
-   margin-top: 3px;
- }
- 
- 
-
-  
-}
- 
-
 /* ----------------------------------------------------------------------------------- */
 
 /* ------------------------------DRINKS MENU------------------------------------------ */
@@ -1345,9 +1499,8 @@ ul {
     width: 100%;
     grid-gap: 10px;
    
-    
-  
 }
+
 .drink-heading {
 
   border: 2px solid black;
@@ -1448,6 +1601,38 @@ ul {
   color: white;
 }
 
+@media (max-width: 1000px) {
+
+  .drink-box {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 60px;
+    margin-left: 12px;
+    width: 95%;
+    grid-gap: 10px;
+   
+}
+
+.drink-square {
+  display: flex;
+  flex-direction: column;
+  /* justify-self: stretch; */
+  /* align-self: stretch; */
+  /* text-align: start; */
+  
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(14, 13, 13, 0.548);
+  z-index: 20;
+}
+
+}
 
 @media (max-width: 750px) {
 
@@ -1464,8 +1649,20 @@ ul {
     
     .day-start-head {
     
+      color: white;
+      border: 1px solid white;
       margin-top: 10px;
       margin-bottom: 0px;
+    }
+
+    .drink-heading {
+
+      border: 2px solid white;
+      color: white;
+      padding: 3px 8px;
+      font-family: 'karla', cursive;
+      margin: auto;
+     
     }
     
     .drink-square {
@@ -1484,11 +1681,14 @@ ul {
       grid-template-columns: 1fr 1fr;
       grid-gap: 10px;
       margin-left: 20px;
+      color: white;
       
     }
     
     .harder-stuff {
     
+      color: white;
+      border: 2px solid white;
       margin-top: 3px;
     }
     
@@ -1497,7 +1697,7 @@ ul {
       margin-bottom: 0px;
       margin-left: 10px;
       font-family: 'karla', sans-serif;
-      
+      color: white;
     }
     
     
@@ -1521,10 +1721,6 @@ ul {
       top: 55%;
     }
 
-    .happy-hour {
-
-      position: relative;
-    }
     
     
     .happy-hour-style {
@@ -1533,7 +1729,7 @@ ul {
       font-size: 3rem;
       font-family:'Lobster Two', sans-serif ;
       text-align: center;
-      color: black;
+      color: white;
       
     }
     
@@ -1627,6 +1823,16 @@ ul {
   font-family: 'reenie beanie', sans-serif;
   font-size: 1.7rem;
   z-index: 1;
+}
+
+@media (min-width: 400px) {
+
+  .google-btn {
+
+    margin-top: 50px;
+    
+  }
+  
 }
 
 .google-btn {
