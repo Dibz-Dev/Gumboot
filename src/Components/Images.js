@@ -1,12 +1,11 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import Gallery from './Gallery';
 import Modal from './Modal'
 import ImageData from '../Data/image-data';
 
 const ImagePane = ({ gallery, sm}) => {
 
-    const [showImages, setImages] = useState('three');
-    const [showGallery, setGallery] = useState(true);
+    const showGallery = true;
 
 
   
