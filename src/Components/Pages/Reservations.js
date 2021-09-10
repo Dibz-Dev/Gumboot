@@ -1,4 +1,4 @@
-import ReservationData from '../Data/reservation-data';
+import ReservationData from '../../PageData/reservation-data';
 
 const Reservations = () => {
 

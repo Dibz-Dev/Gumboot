@@ -1,6 +1,6 @@
 import Drinks from './Menus/Drinks'
 import Food from './Menus/Food'
-import Modal from './Modal';
+import Modal from './Reusables/Modal';
 
 
 const Menu = ({ onFood, onDrinks, fb, gallery, sm }) => {

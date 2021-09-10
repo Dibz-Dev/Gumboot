@@ -1,4 +1,4 @@
-import DrinksData from '../../Data/drinks-data'
+import DrinksData from '../../../PageData/drinks-data'
 
 const Drinks = () => {
     return ( 

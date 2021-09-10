@@ -1,4 +1,4 @@
-import BurgerMenu from "./BurgerMenu";
+import BurgerMenu from "./Pages/Reusables/BurgerMenu";
 
 
 const NavBar = ({ onClick, onFood, onDrinks, openBurger, fb, cc, hb }) => {

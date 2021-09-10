@@ -1,4 +1,4 @@
-import AboutData from '../Data/about-data';
+import AboutData from '../../PageData/about-data';
 
 const About = () => {
 

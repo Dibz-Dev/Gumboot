@@ -1,4 +1,4 @@
-import ContactData from '../Data/contact-data';
+import ContactData from '../../PageData/contact-data';
 
 
 const Contact = () => {

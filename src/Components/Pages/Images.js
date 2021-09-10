@@ -1,7 +1,7 @@
 // import { useState } from 'react';
-import Gallery from './Gallery';
-import Modal from './Modal'
-import ImageData from '../Data/image-data';
+import Gallery from './Reusables/Gallery';
+import Modal from './Reusables/Modal'
+import ImageData from '../../PageData/image-data';
 
 const ImagePane = ({ gallery, sm}) => {
 

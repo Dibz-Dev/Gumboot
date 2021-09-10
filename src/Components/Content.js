@@ -1,10 +1,10 @@
-import Images from './Images';
-import About from './About';
-import Menu from './Menu';
-import Reservations from './Reservations';
-import Contact from './Contact';
+import Images from './Pages/Images';
+import About from './Pages/About';
+import Menu from './Pages/Menu';
+import Reservations from './Pages/Reservations';
+import Contact from './Pages/Contact';
 import NavBar from './NavBar';
-import Footer from './Footer';
+import Footer from './Pages/Reusables/Footer';
 
 import { useState } from 'react';
 

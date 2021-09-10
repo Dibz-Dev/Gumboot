@@ -1,4 +1,4 @@
-import FoodData from "../../Data/food-data";
+import FoodData from "../../../PageData/food-data";
 
 
 const Food = () => {
