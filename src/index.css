@@ -91,9 +91,6 @@ ul {
     margin-top: 50px;
     
   }
-
-  
-
 }
 
 @media (max-width: 1000px) {
@@ -104,7 +101,7 @@ ul {
     top: 0%;
     left: 0%;
     width: 300px;
-    margin-top: -10px;
+    margin-top: 0px;
     margin-left: -40px;
     
   }
