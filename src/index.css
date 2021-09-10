@@ -1188,15 +1188,16 @@ ul {
   font-weight: bold;
 }
 
-@media (min-width: 1000px) {
+@media (max-width: 1100px) {
 
   .cocktail {
 
     display: none;
-    position: absolute;
-    right:3%;
-    top: 55%;
   }
+}
+
+@media (min-width: 1000px) {
+
   
   .svg-drink {
 
