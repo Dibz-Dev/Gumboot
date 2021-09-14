@@ -1,5 +1,5 @@
 import './index.css';
-// import Loading from './Components/loading';
+
 import Content from './Components/Content'
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
          
           <Content />
-   {/* <Loading /> */}
+  
     </div>
   );
 }
