@@ -2096,6 +2096,16 @@ label {
   cursor: pointer;
 }
 
+.thanksMsg {
+
+  margin-top: 150px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 200;
+  font-family: 'love ya like a sister', sans-serif;
+  color: rgb(32, 21, 131);
+}
+
 @media (max-width: 1000px) {
 
   .reviews {

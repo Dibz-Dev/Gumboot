@@ -1,21 +1,52 @@
 {
   "reviews": [
-    
     {
-      "title": "welcome",
-      "rating": "",
-      "body": "dfdfadgfadgdag gdagda sfdawfqwfa",
-      "date": "1st of october",
-      "name": "Ben",
-      "id": 7
+      "title": "Great start to the day!!",
+      "rating": "Excellent",
+      "body": "Really nice way to start the day off with. Awesome service, super tasty coffee and yummy food!!",
+      "date": "Monday 1st of september",
+      "name": "Jackie",
+      "id": 9
     },
     {
-      "title": "hello hello hello",
-      "rating": "",
-      "body": "What a lunch, incredible food and incredible service! the drinks weren't half bad either. very reasonable pricing.",
-      "date": "monday 20th august",
-      "name": "Johnny",
-      "id": 8
+      "title": "In and Out",
+      "rating": "Excellent",
+      "body": "Popped in quickly for a takeaway coffee and a breakfast Burrito, staff were quick and chatted to me while I waited!",
+      "date": "Friday the 8th of September",
+      "name": "Nigel",
+      "id": 10
+    },
+    {
+      "title": "Smashing breaky",
+      "rating": "Pretty good",
+      "body": "nipped in on my way to work for some poached eggs and bacon, top notch as always.",
+      "date": "1st october monday",
+      "name": "Rosco",
+      "id": 11
+    },
+    {
+      "title": "lovely staff",
+      "rating": "Excellent",
+      "body": "Super lovely staff, keep coming back for them! coffee goes alright too :)",
+      "date": "15th august",
+      "name": "Joanna",
+      "id": 14
+    },
+    {
+      "title": "Happiest of Hours",
+      "rating": "Excellent",
+      "body": "Stumbled across the gumboot during happy hour and sampled some of the best cocktails ive ever had.",
+      "date": "18th august",
+      "name": "Jacob",
+      "id": 15
+    },
+    {
+      "title": "Quality",
+      "rating": "Pretty good",
+      "body": "Great quality food, drinks and staff. Will be back.",
+      "date": "monday the 1st of october",
+      "name": "Nico",
+      "id": 16
     }
   ]
 }

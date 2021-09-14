@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import ReviewList from "./Reusables/ReviewList";
 
+
 const Reviews = () => {
 
 const [reviews, setReviews] = useState(null);
@@ -12,6 +13,9 @@ const [date, setDate] = useState('')
 const [name, setName] = useState('')
 
 
+const [message, setMessage] = useState('Loading Reviews...')
+
+
 useEffect(() => {
     
     fetch('http://localhost:8000/reviews')
@@ -19,10 +23,16 @@ useEffect(() => {
         return res.json()
     })
     .then(data => {
+        
         console.log(data)
         setReviews(data)
     })
 },[])
+
+const updateMessage = () => {
+    
+    setMessage('Thank you for your Message, we hope to see you again soon!!')
+}
 
 const postReview = (e) => {
  e.preventDefault()
@@ -34,7 +44,14 @@ const postReview = (e) => {
      headers: {'Content-Type': 'application/json'},
      body: JSON.stringify(review)
  }).then(() => {
-     console.log('new review added')
+     
+    updateMessage()
+     setTitle('')
+     setName('')
+     setDate('')
+     setBody('')
+
+
      
  })
 
@@ -47,10 +64,11 @@ const postReview = (e) => {
 
               <h1 className='reviews-header'> Our Customers Comments!</h1>
                         <div className="reviews-box">
+                            {!reviews && <div> <h3 style={{ textAlign: 'center', fontFamily: 'karla'}}>{message}</h3> </div>}
                            {reviews && <ReviewList reviews={reviews} />}
                          </div>
 
-                <h2 style={{ marginTop: '50px'}}  className="reviews-header">Leave your own Comment?
+        {message === 'Thank you for your Message, we hope to see you again soon!!' ? <div><h2 className='thanksMsg'>{message}</h2></div> : <div>  <h2 style={{ marginTop: '50px'}}  className="reviews-header">Leave your own Comment?
                 </h2>
                 <h6 style={{ 
                     color: 'white',
@@ -58,21 +76,24 @@ const postReview = (e) => {
                     textAlign: 'center',
                     fontSize: '0.5rem'
                     }}>All Comments Good and Bad will be added to our site for everyone to see,<br/> however any rude or distasteful comments will be removed.</h6>
-                <form className="reviewForm-wrapper" onSubmit={postReview}>
+            <form className="reviewForm-wrapper" onSubmit={postReview}>
+
                 <div className="form-seperator">
                 <label>Review Title</label>
                 <input 
                  className="reviews-input"
                  type="text"
                  required
-                 value={title}
-                 onChange={(e) => setTitle(e.target.value) }/>
+                 name='title'
+                 value={ title }
+                 onChange={(e) => setTitle(e.target.value)  }/>
                  </div>
                  <label>Name</label>
                 <input
                  className="reviews-input-date" 
                  type="text"
                  required 
+                 name='name'
                  value={name}
                  onChange={(e) => setName(e.target.value)} />
                 <div className="checkbox-wrapper">
@@ -104,6 +125,7 @@ const postReview = (e) => {
                  className="reviews-input-date" 
                  type="text"
                  required 
+                 name='date'
                  value={date}
                  onChange={(e) => setDate(e.target.value)} />
                 </div>
@@ -120,7 +142,7 @@ const postReview = (e) => {
                 }}type="submit">Submit</button>
                 </form>
             
-
+                </div>}
             </div>
      );
 }
