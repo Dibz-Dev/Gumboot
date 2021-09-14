@@ -795,7 +795,7 @@ ul {
       animation-name: fade;
       animation-duration: 2s;
       animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-      border: 1px solid blue;
+    
       }
 
     .img-slide {
