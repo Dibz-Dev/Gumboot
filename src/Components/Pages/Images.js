@@ -7,9 +7,6 @@ const ImagePane = ({ gallery, sm}) => {
 
     const showGallery = true;
 
-
-  
-
      if(sm === false) {
 
         return (

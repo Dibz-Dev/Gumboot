@@ -14,6 +14,7 @@ const NavBar = ({ onClick, onFood, onDrinks, openBurger, fb, cc, hb }) => {
                     <li id="About" className="about-lk" onClick={onClick} >
                         {cc === "About" ? <img className="cup about-cup" src="myCoff.svg" alt="coffee" /> : null }About</li>
                     <li id="Menu" className="menu-lk" onClick={onClick}>{cc === "Menu" ? <img className="cup menu-cup" src="myCoff.svg" alt="coffee" /> : null } Menu</li>
+                    <li id="Review" className="review-lk" onClick={onClick}>{cc === "Reviews" ? <img className="cup review-cup" src="myCoff.svg" alt="coffee" /> : null } Reviews</li>
                     <li id="Reservations" className="reservations-lk" onClick={onClick}>{cc === "Reservations" ?<img className="cup reservations-cup" src="myCoff.svg" alt="coffee" /> : null}Reservations</li>
                     <li id="Contact" className="contact-lk" onClick={onClick}>{cc === "Contact" ? <img className="cup contact-cup" src="myCoff.svg" alt="coffee" /> : null}Contact</li>
 

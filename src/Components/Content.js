@@ -7,6 +7,7 @@ import NavBar from './NavBar';
 import Footer from './Pages/Reusables/Footer';
 
 import { useState } from 'react';
+import Reviews from './Pages/Reviews';
 
 
 const Content = () => {
@@ -64,6 +65,11 @@ const Content = () => {
                 window.scrollTo(0, 0)      
                 closeNav()
     
+            }  else if (e.target.classList.contains('review-lk')) {
+                setChange("Reviews")
+                window.scrollTo(0, 0)      
+                closeNav()
+    
             } else if(e.target.classList.contains('reservations-lk')) {
                 setChange("Reservations")
                 window.scrollTo(0, 0)        
@@ -91,6 +97,7 @@ const Content = () => {
         {burger  ? <div className="nav-overlay"></div> : null}
         { whichComponent === "" && <Images gallery={galleryClick} sm={showModal} /> }
         { whichComponent === "About" ? <About /> : null }
+        { whichComponent === "Reviews" ? <Reviews /> : null}
         { whichComponent === "Menu" ? <Menu onFood={changeFood} onDrinks={changeDrinks}  fb={showMenu} sm=  {showModal} gallery={galleryClick} /> : null }
         { whichComponent === "Reservations" ? <Reservations /> : null }
         { whichComponent === "Contact" ? <Contact /> : null }
