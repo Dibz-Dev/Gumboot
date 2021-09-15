@@ -1,7 +1,6 @@
 
 import { useState, useEffect } from "react";
-import ReviewList from "./Reusables/ReviewList";
-
+import ReviewList from "./Reusables/ReviewList"; 
 
 const Reviews = () => {
 
@@ -11,7 +10,6 @@ const [rating, setRating] = useState('');
 const [body, setBody] = useState('');
 const [date, setDate] = useState('')
 const [name, setName] = useState('')
-
 
 const [message, setMessage] = useState('Loading Reviews...')
 
@@ -31,8 +29,8 @@ useEffect(() => {
 },[])
 
 const updateMessage = () => {
-    
-    setMessage('Thank you for your Message, we hope to see you again soon!!')
+
+  setMessage('Thank you for your Message, we hope to see you again soon!!')
 }
 
 const postReview = (e) => {
@@ -51,14 +49,8 @@ const postReview = (e) => {
      setName('')
      setDate('')
      setBody('')
-
-
-     
  })
-
- 
 }
-
     return ( 
 
             <div className="content-container reviews">
@@ -84,6 +76,7 @@ const postReview = (e) => {
                 <input 
                  className="reviews-input"
                  type="text"
+                 autoComplete="off"
                  required
                  name='title'
                  value={ title }
@@ -94,6 +87,7 @@ const postReview = (e) => {
                  className="reviews-input-date" 
                  type="text"
                  required 
+                 autoComplete="off"
                  name='name'
                  value={name}
                  onChange={(e) => setName(e.target.value)} />
@@ -113,6 +107,7 @@ const postReview = (e) => {
                 <textarea 
                  style={{ borderRadius: '3px'}}
                  name="body"
+                 autoComplete="off"
                  required 
                  value={body}
                  cols="30" rows="10"
@@ -126,6 +121,7 @@ const postReview = (e) => {
                  className="reviews-input-date" 
                  type="text"
                  required 
+                 autoComplete="off"
                  name='date'
                  value={date}
                  onChange={(e) => setDate(e.target.value)} />
