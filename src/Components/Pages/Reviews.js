@@ -17,7 +17,7 @@ const [message, setMessage] = useState('Loading Reviews...')
 
 useEffect(() => {
     
-    fetch('/reviews')
+    fetch('https://gumboot.herokuapp.com/reviews')
     .then(res => {
         return res.json()
     })
@@ -38,7 +38,7 @@ const postReview = (e) => {
 
  const review = { title, name, rating, body, date }
 
- fetch('/reviews', {
+ fetch('https://gumboot.herokuapp.com/reviews', {
      method: 'POST',
      headers: {'Content-Type': 'application/json'},
      body: JSON.stringify(review)
