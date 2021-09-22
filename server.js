@@ -17,6 +17,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true})
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/reviews', async (req, res) => {
     

@@ -36,7 +36,7 @@ const updateMessage = () => {
 const postReview = (e) => {
  e.preventDefault()
 
- const review = { title, name, rating, body, date }
+ const review = { title, name, rating, body, date, }
 
  fetch('https://gumboot.herokuapp.com/reviews', {
      method: 'POST',
